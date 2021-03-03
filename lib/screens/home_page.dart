@@ -18,7 +18,19 @@ class _HomePageState extends State<HomePage> {
           Icon(Icons.add_box_outlined),
         ],
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Row(
+          children: [
+            Text("My work"),
+            SizedBox(
+              height: 10,
+            )
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -30,7 +42,11 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.explore),
-            title: Text('Messages'),
+            title: Text('Explore'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.perm_identity),
+            title: Text('Profile'),
           ),
           /*  BottomNavigationBarItem(
               icon: Icon(Icons.person), title: Text('Profile')) */
